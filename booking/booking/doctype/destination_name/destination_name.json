@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:destination_name",
+ "creation": "2022-12-14 13:56:13.509435",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "destination_name",
+  "section_break_2",
+  "air_travel",
+  "column_break_3",
+  "sea_travel",
+  "column_break_5",
+  "overland_travel",
+  "section_break_8",
+  "vip_class",
+  "column_break_10",
+  "business_class",
+  "column_break_12",
+  "economy_class",
+  "section_break_14",
+  "best_place"
+ ],
+ "fields": [
+  {
+   "fieldname": "destination_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Destination Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "air_travel",
+   "fieldtype": "Select",
+   "label": "Air Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "sea_travel",
+   "fieldtype": "Select",
+   "label": "Sea Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "overland_travel",
+   "fieldtype": "Select",
+   "label": "Overland Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "vip_class",
+   "fieldtype": "Select",
+   "label": "Vip Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_class",
+   "fieldtype": "Select",
+   "label": "Business Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "economy_class",
+   "fieldtype": "Select",
+   "label": "Economy Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "best_place",
+   "fieldtype": "Data",
+   "label": "The best place"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-18 11:42:21.158206",
+ "modified_by": "Administrator",
+ "module": "Booking",
+ "name": "Destination Name",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "best_place",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "best_place",
+ "translated_doctype": 1
+}

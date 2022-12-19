@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2022-12-18 12:55:05.220922",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "destination",
+  "air_travel",
+  "sea_travel",
+  "overland_travel"
+ ],
+ "fields": [
+  {
+   "fieldname": "destination",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Destination",
+   "options": "Destination Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "air_travel",
+   "fieldtype": "Check",
+   "label": "Air Travel"
+  },
+  {
+   "default": "0",
+   "fetch_from": "destination.sea_travel",
+   "fieldname": "sea_travel",
+   "fieldtype": "Check",
+   "label": "Sea Travel"
+  },
+  {
+   "default": "0",
+   "fetch_from": "destination.overland_travel",
+   "fieldname": "overland_travel",
+   "fieldtype": "Check",
+   "label": "Overland Travel"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-18 15:23:13.607563",
+ "modified_by": "Administrator",
+ "module": "Booking",
+ "name": "Travel Type",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

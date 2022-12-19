@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2022-12-14 14:22:16.552857",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "adult",
+  "destination_name",
+  "ticket_class",
+  "column_break_4",
+  "from",
+  "to",
+  "section_break_8",
+  "hotel_name",
+  "column_break_10",
+  "number_of_nights",
+  "section_break_12",
+  "activetes",
+  "costus",
+  "travel_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "destination_name",
+   "fieldtype": "Link",
+   "label": "Destination Name",
+   "options": "Destination Name"
+  },
+  {
+   "fieldname": "hotel_name",
+   "fieldtype": "Link",
+   "label": "Hotel Name",
+   "options": "Hotel"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_nights",
+   "fieldtype": "Int",
+   "label": "Number of nights"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "travel_type",
+   "fieldtype": "Link",
+   "label": "Travel Type ",
+   "options": "Travel Type"
+  },
+  {
+   "fieldname": "ticket_class",
+   "fieldtype": "Select",
+   "label": "Ticket Class",
+   "options": "\nVip Class\nBusiness Class\nEconomy Class"
+  },
+  {
+   "fieldname": "costus",
+   "fieldtype": "Data",
+   "label": "Cost(US)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "adult",
+   "fieldtype": "Check",
+   "label": "Are you an adult?"
+  },
+  {
+   "fieldname": "activetes",
+   "fieldtype": "Table",
+   "label": "Activetes",
+   "options": "Active List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-18 13:13:43.513686",
+ "modified_by": "Administrator",
+ "module": "Booking",
+ "name": "Reservation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
