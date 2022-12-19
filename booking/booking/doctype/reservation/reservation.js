@@ -45,12 +45,23 @@ frappe.ui.form.on('Reservation', {
 			if(index == 1){class_list.push("Vip Class")};
 			if(index == 2){class_list.push("Economy Class");
 		}
-		}	
-		})
+	    }	
+	    })
+		frappe.msgprint(class_list)
 		set_field_options("ticket_class", class_list);
-	}
-});
-frappe.ui.form.on('Reservation', {
-	activites: function(frm) {
+	},
+	distination: function(frm) {
 		frm.set_value("costus",Math.floor(Math.random() * 1000))
-	}});
+	},
+    from: function(frm) {
+		var date = new Date();
+	    var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
+		Difference_In_Time = current_date.getTime() - date1.getTime();
+		},
+    to: function(frm) {
+    //frappe.msgprint(frm.doc.to.getTime() - frm.doc.from.getTime())
+},
+});
+
+
+

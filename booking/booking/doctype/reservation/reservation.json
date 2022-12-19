@@ -9,12 +9,13 @@
  "engine": "InnoDB",
  "field_order": [
   "full_name",
-  "adult",
   "destination_name",
-  "ticket_class",
-  "column_break_4",
   "from",
+  "column_break_4",
+  "adult",
+  "travel_type",
   "to",
+  "ticket_class",
   "section_break_8",
   "hotel_name",
   "column_break_10",
@@ -22,7 +23,12 @@
   "section_break_12",
   "activetes",
   "costus",
-  "travel_type"
+  "air_travel",
+  "sea_travel",
+  "overland_travel",
+  "business_class",
+  "vip_class",
+  "economy_class"
  ],
  "fields": [
   {
@@ -37,7 +43,8 @@
    "fieldname": "destination_name",
    "fieldtype": "Link",
    "label": "Destination Name",
-   "options": "Destination Name"
+   "options": "Destination Name",
+   "reqd": 1
   },
   {
    "fieldname": "hotel_name",
@@ -52,12 +59,14 @@
   {
    "fieldname": "from",
    "fieldtype": "Date",
-   "label": "From"
+   "label": "From",
+   "reqd": 1
   },
   {
    "fieldname": "to",
    "fieldtype": "Date",
-   "label": "To"
+   "label": "To",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_8",
@@ -78,15 +87,16 @@
   },
   {
    "fieldname": "travel_type",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Travel Type ",
-   "options": "Travel Type"
+   "options": "\nAir Travel\nSea Travel\nOverland Travel"
   },
   {
    "fieldname": "ticket_class",
    "fieldtype": "Select",
    "label": "Ticket Class",
-   "options": "\nVip Class\nBusiness Class\nEconomy Class"
+   "options": "\nVip Class\nBusiness Class\nEconomy Class",
+   "reqd": 1
   },
   {
    "fieldname": "costus",
@@ -105,11 +115,59 @@
    "fieldtype": "Table",
    "label": "Activetes",
    "options": "Active List"
+  },
+  {
+   "fetch_from": "destination_name.air_travel",
+   "fieldname": "air_travel",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Air Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fetch_from": "destination_name.data_12",
+   "fieldname": "sea_travel",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Sea Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fetch_from": "destination_name.overland_travel",
+   "fieldname": "overland_travel",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Overland Travel",
+   "options": "True\nFalse"
+  },
+  {
+   "fetch_from": "destination_name.data_9",
+   "fieldname": "business_class",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Business Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fetch_from": "destination_name.data_14",
+   "fieldname": "vip_class",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Vip Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fetch_from": "destination_name.data_13",
+   "fieldname": "economy_class",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Economy Class",
+   "options": "True\nFalse"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-18 13:13:43.513686",
+ "modified": "2022-12-19 16:08:46.553757",
  "modified_by": "Administrator",
  "module": "Booking",
  "name": "Reservation",
