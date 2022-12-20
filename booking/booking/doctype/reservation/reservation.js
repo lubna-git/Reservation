@@ -54,12 +54,17 @@ frappe.ui.form.on('Reservation', {
 		frm.set_value("costus",Math.floor(Math.random() * 1000))
 	},
     from: function(frm) {
-		var date = new Date();
-	    var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
-		Difference_In_Time = current_date.getTime() - date1.getTime();
+		const date = new Date();
+		const date_from = new Date(frm.doc.from);
+		if(Math.ceil(date_from - date) <= 0){
+			frappe.throw("Please put date after today in the (from field)")};
 		},
     to: function(frm) {
-    //frappe.msgprint(frm.doc.to.getTime() - frm.doc.from.getTime())
+		const date_from = new Date(frm.doc.from);
+		const date_to = new Date(frm.doc.to);
+		const time = Math.abs(date_to - date_from);
+		const Days = Math.ceil(time/(1000 * 3600 * 24));
+		frm.set_value("number_of_nights",Days);  
 },
 });
 
