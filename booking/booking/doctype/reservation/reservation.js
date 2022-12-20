@@ -50,8 +50,9 @@ frappe.ui.form.on('Reservation', {
 		frappe.msgprint(class_list)
 		set_field_options("ticket_class", class_list);
 	},
-	distination: function(frm) {
+	before_save: function(frm) {
 		frm.set_value("costus",Math.floor(Math.random() * 1000))
+		frm.set_value("support_number","+97710000000")
 	},
     from: function(frm) {
 		const date = new Date();

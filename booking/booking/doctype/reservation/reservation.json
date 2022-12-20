@@ -11,11 +11,11 @@
   "full_name",
   "destination_name",
   "from",
-  "column_break_4",
-  "adult",
-  "travel_type",
-  "to",
   "ticket_class",
+  "column_break_4",
+  "travel_type",
+  "adult",
+  "to",
   "section_break_8",
   "hotel_name",
   "column_break_10",
@@ -28,7 +28,8 @@
   "overland_travel",
   "business_class",
   "vip_class",
-  "economy_class"
+  "economy_class",
+  "support_number"
  ],
  "fields": [
   {
@@ -141,7 +142,7 @@
    "options": "True\nFalse"
   },
   {
-   "fetch_from": "destination_name.data_9",
+   "fetch_from": "destination_name.business_class",
    "fieldname": "business_class",
    "fieldtype": "Select",
    "hidden": 1,
@@ -149,7 +150,7 @@
    "options": "True\nFalse"
   },
   {
-   "fetch_from": "destination_name.data_14",
+   "fetch_from": "destination_name.vip_class",
    "fieldname": "vip_class",
    "fieldtype": "Select",
    "hidden": 1,
@@ -157,17 +158,24 @@
    "options": "True\nFalse"
   },
   {
-   "fetch_from": "destination_name.data_13",
+   "fetch_from": "destination_name.economy_class",
    "fieldname": "economy_class",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Economy Class",
    "options": "True\nFalse"
+  },
+  {
+   "depends_on": "costus",
+   "fieldname": "support_number",
+   "fieldtype": "Phone",
+   "label": "Support Number",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-19 16:08:46.553757",
+ "modified": "2022-12-20 11:27:17.171694",
  "modified_by": "Administrator",
  "module": "Booking",
  "name": "Reservation",

@@ -16,11 +16,11 @@
   "column_break_5",
   "overland_travel",
   "section_break_8",
-  "data_9",
+  "business_class",
   "column_break_10",
-  "data_14",
+  "vip_class",
   "column_break_12",
-  "data_13",
+  "economy_class",
   "section_break_14",
   "best_place"
  ],
@@ -85,19 +85,19 @@
    "options": "True\nFalse"
   },
   {
-   "fieldname": "data_14",
-   "fieldtype": "Select",
-   "label": "Vip Class",
-   "options": "True\nFalse"
-  },
-  {
-   "fieldname": "data_9",
+   "fieldname": "business_class",
    "fieldtype": "Select",
    "label": "Business Class",
    "options": "True\nFalse"
   },
   {
-   "fieldname": "data_13",
+   "fieldname": "vip_class",
+   "fieldtype": "Select",
+   "label": "Vip Class",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "economy_class",
    "fieldtype": "Select",
    "label": "Economy Class",
    "options": "True\nFalse"
@@ -105,7 +105,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-19 15:33:39.599202",
+ "modified": "2022-12-20 10:10:55.734870",
  "modified_by": "Administrator",
  "module": "Booking",
  "name": "Destination Name",
