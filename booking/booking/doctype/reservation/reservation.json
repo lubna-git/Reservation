@@ -26,10 +26,10 @@
   "air_travel",
   "sea_travel",
   "overland_travel",
+  "support_number",
   "business_class",
   "vip_class",
-  "economy_class",
-  "support_number"
+  "economy_class"
  ],
  "fields": [
   {
@@ -142,6 +142,13 @@
    "options": "True\nFalse"
   },
   {
+   "depends_on": "costus",
+   "fieldname": "support_number",
+   "fieldtype": "Phone",
+   "label": "Support Number",
+   "read_only": 1
+  },
+  {
    "fetch_from": "destination_name.business_class",
    "fieldname": "business_class",
    "fieldtype": "Select",
@@ -164,18 +171,11 @@
    "hidden": 1,
    "label": "Economy Class",
    "options": "True\nFalse"
-  },
-  {
-   "depends_on": "costus",
-   "fieldname": "support_number",
-   "fieldtype": "Phone",
-   "label": "Support Number",
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-20 11:27:17.171694",
+ "modified": "2022-12-20 12:34:46.277512",
  "modified_by": "Administrator",
  "module": "Booking",
  "name": "Reservation",

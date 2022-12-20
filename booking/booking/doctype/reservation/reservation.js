@@ -8,7 +8,7 @@ frappe.ui.form.on('Reservation', {
 		const travel_list = []
 		const list1 = [frm.doc.business_class,frm.doc.vip_class,frm.doc.economy_class]
 		const class_list = []
-
+    
 		cur_frm.set_query("hotel_name", function(){
 			return {
 				"filters": {
@@ -47,7 +47,6 @@ frappe.ui.form.on('Reservation', {
 		}
 	    }	
 	    })
-		frappe.msgprint(class_list)
 		set_field_options("ticket_class", class_list);
 	},
 	before_save: function(frm) {
